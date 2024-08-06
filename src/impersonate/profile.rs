@@ -110,7 +110,7 @@ pub enum Impersonate {
     #[default]
     Chrome126,
     Chrome127,
-    Cronet
+    Cronet,
     SafariIos17_2,
     SafariIos17_4_1,
     SafariIos16_5,
