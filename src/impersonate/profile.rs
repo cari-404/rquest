@@ -58,6 +58,7 @@ fn get_settings(ver: Impersonate) -> ImpersonateSettings {
         Impersonate::Chrome124 => chrome::v124::get_settings,
         Impersonate::Chrome126 => chrome::v126::get_settings,
         Impersonate::Chrome127 => chrome::v127::get_settings,
+        Impersonate::Chrome127 => chrome::cronet::get_settings,
 
         Impersonate::SafariIos17_2 => safari::safari_ios_17_2::get_settings,
         Impersonate::SafariIos17_4_1 => safari::safari_ios_17_4_1::get_settings,
@@ -109,6 +110,7 @@ pub enum Impersonate {
     #[default]
     Chrome126,
     Chrome127,
+    Cronet
     SafariIos17_2,
     SafariIos17_4_1,
     SafariIos16_5,
@@ -158,6 +160,7 @@ impl FromStr for Impersonate {
             "chrome_124" => Ok(Impersonate::Chrome124),
             "chrome_126" => Ok(Impersonate::Chrome126),
             "chrome_127" => Ok(Impersonate::Chrome127),
+            "cronet" => Ok(Impersonate::Cronet),
 
             "safari_ios_17.2" => Ok(Impersonate::SafariIos17_2),
             "safari_ios_17.4.1" => Ok(Impersonate::SafariIos17_4_1),
@@ -210,7 +213,8 @@ impl Impersonate {
             | Impersonate::Chrome123
             | Impersonate::Chrome124
             | Impersonate::Chrome126
-            | Impersonate::Chrome127 => ClientProfile::Chrome,
+            | Impersonate::Chrome127
+            | Impersonate::Cronet => ClientProfile::Chrome,
 
             Impersonate::SafariIos17_2
             | Impersonate::SafariIos16_5
