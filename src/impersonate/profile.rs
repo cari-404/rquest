@@ -58,7 +58,7 @@ fn get_settings(ver: Impersonate) -> ImpersonateSettings {
         Impersonate::Chrome124 => chrome::v124::get_settings,
         Impersonate::Chrome126 => chrome::v126::get_settings,
         Impersonate::Chrome127 => chrome::v127::get_settings,
-        Impersonate::Chrome127 => chrome::cronet::get_settings,
+        Impersonate::Cronet => chrome::cronet::get_settings,
 
         Impersonate::SafariIos17_2 => safari::safari_ios_17_2::get_settings,
         Impersonate::SafariIos17_4_1 => safari::safari_ios_17_4_1::get_settings,
