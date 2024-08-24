@@ -115,8 +115,8 @@ ipnet = "2.9.0"
 ## boring-tls
 boring = { package = "rboring", version = "4", optional = true }
 boring-sys = { package = "rboring-sys", version = "4", optional = true }
-hyper-boring = { package = "hyper-rboring-imp", version = "4", optional = true }
-tokio-boring = { package = "tokio-rboring-imp", version = "4", optional = true }
+hyper-boring = { package = "hyper-rboring", version = "4", optional = true }
+tokio-boring = { package = "tokio-rboring", version = "4", optional = true }
 foreign-types = { version = "0.5.0", optional = true }
 antidote = { version = "1.0.0", optional = true }
 
