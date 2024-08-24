@@ -92,7 +92,7 @@ mime_guess = { version = "2.0", default-features = false, optional = true }
 
 encoding_rs = "0.8"
 http-body = "0.4.6"
-hyper = { package = "hyper_imp", version = "0.14", default-features = false, features = [
+hyper = { package = "rhyper", version = "0.14", default-features = false, features = [
     "tcp",
     "http1",
     "http2",
@@ -140,7 +140,7 @@ hickory-resolver = { version = "0.24", optional = true, features = ["tokio-runti
 
 [dev-dependencies]
 env_logger = "0.10.0"
-hyper = { package = "hyper_imp", version = "0.14", default-features = false, features = [
+hyper = { package = "rhyper", version = "0.14", default-features = false, features = [
     "tcp",
     "stream",
     "http1",
